@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Game_of_Life_(Java).iml" filepath="$PROJECT_DIR$/.idea/Game_of_Life_(Java).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Game_of_Life_(Java).iml" filepath="$PROJECT_DIR$/.idea/Game_of_Life_(Java).iml" group="Game_of_Life_(Java)" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Game of Life (Java)/task/Game_of_Life_(Java)-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Game of Life (Java)/task/Game_of_Life_(Java)-task.iml" group="Game_of_Life_(Java)/Game_of_Life_(Java)-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Game of Life (Java)/task/Game_of_Life_(Java)-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Game of Life (Java)/task/Game_of_Life_(Java)-task_main.iml" group="Game_of_Life_(Java)/Game_of_Life_(Java)-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Game of Life (Java)/task/Game_of_Life_(Java)-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Game of Life (Java)/task/Game_of_Life_(Java)-task_test.iml" group="Game_of_Life_(Java)/Game_of_Life_(Java)-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="Game_of_Life_(Java)/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="Game_of_Life_(Java)/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="Game_of_Life_(Java)/util" />
     </modules>
   </component>
 </project>

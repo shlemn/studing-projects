@@ -274,7 +274,7 @@
           <option name="items">
             <list>
               <FrameworkLesson>
-                <option name="currentTaskIndex" value="2" />
+                <option name="currentTaskIndex" value="3" />
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="1" />
@@ -401,9 +401,9 @@
                       <option name="id" value="5438" />
                       <option name="index" value="3" />
                       <option name="name" value="Life goes by" />
-                      <option name="record" value="-1" />
-                      <option name="status" value="Unchecked" />
-                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="record" value="3" />
+                      <option name="status" value="Solved" />
+                      <option name="stepikChangeStatus" value="Info and Content changed" />
                       <option name="files">
                         <map>
                           <entry key="test/GameOfLifeTest.java">
@@ -502,9 +502,24 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="src/life/Main.java" />
                                 <option name="text" value="package life;&#10;&#10;import java.util.*;&#10;&#10;public class Main {&#10;    public static void main(String[] args) {&#10;        Scanner sc = new Scanner(System.in);&#10;        int n = sc.nextInt();&#10;        int seed = sc.nextInt();&#10;        int m = sc.nextInt();&#10;        Random rnd = new Random(seed);&#10;        boolean num;&#10;        int v = 1;&#10;        String[][] a = new String[n][n]; //начальный массив&#10;        String[][] b = new String[n][n]; //массив для переноса на следующее поколение&#10;&#10;        //создание начальной популяции&#10;        for (int i = 0; i &lt; n; i++) {&#10;            for (int j = 0; j &lt; n; j++) {&#10;                num = rnd.nextBoolean();&#10;                a[i][j] = num ? &quot;O&quot; : &quot; &quot;;&#10;            }&#10;        }&#10;&#10;        while (v &lt;= m) {&#10;&#10;            for (int i = 0; i &lt; n; i++) {&#10;                for (int j = 0; j &lt; n; j++) {&#10;                    int count = 0;                                          //проверка соседних 8 ячеек на живность&#10;                    int N, S, W, E, NWi, NWj, NEi, NEj, SWi, SWj, SEi, SEj = 0;        //| NW | N | NE |&#10;                    N = (i == 0) ? n - 1 : i - 1; //N ячейка                        | W  |   | E  |&#10;                    S = (i == n - 1) ? 0 : i + 1; //S ячейка                        | SW | S | SE |&#10;                    W = (j == 0) ? n - 1 : j - 1; //W ячейка&#10;                    E = (j == n - 1) ? 0 : j + 1; //E ячейка&#10;                    NWi = (i == 0) ? n - 1 : i - 1; //NW&#10;                    NWj = (j == 0) ? n - 1 : j - 1;&#10;                    NEi = (i == 0) ? n - 1 : i - 1; //NE&#10;                    NEj = (j == n - 1) ? 0 : j + 1;&#10;                    SWi = (i == n - 1) ? 0 : i + 1; //SW&#10;                    SWj = (j == 0) ? n - 1 : j - 1;&#10;                    SEi = (i == n - 1) ? 0 : i + 1; //SE&#10;                    SEj = (j == n - 1) ? 0 : j + 1;&#10;                    count = a[NWi][NWj] == &quot;O&quot; ? count + 1 : count;           //подсчет живых ячеек&#10;                    count = a[NEi][NEj] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[SWi][SWj] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[SEi][SEj] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[N][j] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[S][j] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[i][W] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[i][E] == &quot;O&quot; ? count + 1 : count;&#10;                    b[i][j] = a[i][j] == &quot;O&quot; ? count &gt; 3 || count &lt; 2 ? &quot; &quot; : &quot;O&quot; : //изменение ячеек в зависимости от живности вокруг&#10;                            count == 3 ? &quot;O&quot; : &quot; &quot;;&#10;                }&#10;            }&#10;&#10;            for (int i = 0; i &lt; n; i++) {            //замена старого поколения новым&#10;                for (int j = 0; j &lt; n; j++) {&#10;                    a[i][j] = b[i][j];&#10;                }&#10;            }&#10;            v++;&#10;&#10;        }&#10;        for (int i = 0; i &lt; n; i++) {                //вывод итога&#10;            for (int j = 0; j &lt; n; j++) {&#10;                System.out.print(a[i][j]);&#10;            }&#10;            System.out.println();&#10;        }&#10;    }&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/life/Main.class">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/life/Main.class" />
+                                <option name="text" value="" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="visible" value="true" />
@@ -533,36 +548,6 @@
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="files">
                         <map>
-                          <entry key="src/life/ApplicationRunner.java">
-                            <value>
-                              <TaskFile>
-                                <option name="answerPlaceholders">
-                                  <list />
-                                </option>
-                                <option name="highlightErrors" value="false" />
-                                <option name="name" value="src/life/ApplicationRunner.java" />
-                                <option name="text" value="package life;&#10;&#10;public class ApplicationRunner {&#10;    public static void main(String[] args) {&#10;        new GameOfLife();&#10;    }&#10;}&#10;" />
-                                <option name="trackChanges" value="true" />
-                                <option name="trackLengths" value="true" />
-                                <option name="visible" value="true" />
-                              </TaskFile>
-                            </value>
-                          </entry>
-                          <entry key="src/life/GameOfLife.java">
-                            <value>
-                              <TaskFile>
-                                <option name="answerPlaceholders">
-                                  <list />
-                                </option>
-                                <option name="highlightErrors" value="false" />
-                                <option name="name" value="src/life/GameOfLife.java" />
-                                <option name="text" value="package life;&#10;&#10;import javax.swing.*;&#10;&#10;public class GameOfLife extends JFrame {&#10;    public GameOfLife() {&#10;        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#10;        setSize(300, 300);&#10;        setVisible(true);&#10;    }&#10;}&#10;" />
-                                <option name="trackChanges" value="true" />
-                                <option name="trackLengths" value="true" />
-                                <option name="visible" value="true" />
-                              </TaskFile>
-                            </value>
-                          </entry>
                           <entry key="test/GameOfLifeTest.java">
                             <value>
                               <TaskFile>
@@ -677,6 +662,21 @@
                                 <option name="highlightErrors" value="false" />
                                 <option name="name" value="src/life/Main.java" />
                                 <option name="text" value="package life;&#10;&#10;import java.util.*;&#10;&#10;public class Main {&#10;    public static void main(String[] args) {&#10;        Scanner sc = new Scanner(System.in);&#10;        int n = sc.nextInt();&#10;        int seed = sc.nextInt();&#10;        int m = sc.nextInt();&#10;        Random rnd = new Random(seed);&#10;        boolean num;&#10;        int v = 1;&#10;        String[][] a = new String[n][n]; //начальный массив&#10;        String[][] b = new String[n][n]; //массив для переноса на следующее поколение&#10;&#10;        //создание начальной популяции&#10;        for (int i = 0; i &lt; n; i++) {&#10;            for (int j = 0; j &lt; n; j++) {&#10;                num = rnd.nextBoolean();&#10;                a[i][j] = num ? &quot;O&quot; : &quot; &quot;;&#10;            }&#10;        }&#10;&#10;        while (v &lt;= m) {&#10;&#10;            for (int i = 0; i &lt; n; i++) {&#10;                for (int j = 0; j &lt; n; j++) {&#10;                    int count = 0;                                          //проверка соседних 8 ячеек на живность&#10;                    int N, S, W, E, NWi, NWj, NEi, NEj, SWi, SWj, SEi, SEj = 0;        //| NW | N | NE |&#10;                    N = (i == 0) ? n - 1 : i - 1; //N ячейка                        | W  |   | E  |&#10;                    S = (i == n - 1) ? 0 : i + 1; //S ячейка                        | SW | S | SE |&#10;                    W = (j == 0) ? n - 1 : j - 1; //W ячейка&#10;                    E = (j == n - 1) ? 0 : j + 1; //E ячейка&#10;                    NWi = (i == 0) ? n - 1 : i - 1; //NW&#10;                    NWj = (j == 0) ? n - 1 : j - 1;&#10;                    NEi = (i == 0) ? n - 1 : i - 1; //NE&#10;                    NEj = (j == n - 1) ? 0 : j + 1;&#10;                    SWi = (i == n - 1) ? 0 : i + 1; //SW&#10;                    SWj = (j == 0) ? n - 1 : j - 1;&#10;                    SEi = (i == n - 1) ? 0 : i + 1; //SE&#10;                    SEj = (j == n - 1) ? 0 : j + 1;&#10;                    count = a[NWi][NWj] == &quot;O&quot; ? count + 1 : count;           //подсчет живых ячеек&#10;                    count = a[NEi][NEj] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[SWi][SWj] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[SEi][SEj] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[N][j] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[S][j] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[i][W] == &quot;O&quot; ? count + 1 : count;&#10;                    count = a[i][E] == &quot;O&quot; ? count + 1 : count;&#10;                    b[i][j] = a[i][j] == &quot;O&quot; ? count &gt; 3 || count &lt; 2 ? &quot; &quot; : &quot;O&quot; : //изменение ячеек в зависимости от живности вокруг&#10;                            count == 3 ? &quot;O&quot; : &quot; &quot;;&#10;                }&#10;            }&#10;&#10;            for (int i = 0; i &lt; n; i++) {            //замена старого поколения новым&#10;                for (int j = 0; j &lt; n; j++) {&#10;                    a[i][j] = b[i][j];&#10;                }&#10;            }&#10;            v++;&#10;&#10;        }&#10;        for (int i = 0; i &lt; n; i++) {                //вывод итога&#10;            for (int j = 0; j &lt; n; j++) {&#10;                System.out.print(a[i][j]);&#10;            }&#10;            System.out.println();&#10;        }&#10;    }&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/life/Main.class">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/life/Main.class" />
+                                <option name="text" value="//&#10;// Source code recreated from a .class file by IntelliJ IDEA&#10;// (powered by Fernflower decompiler)&#10;//&#10;&#10;package life;&#10;&#10;import java.io.IOException;&#10;import java.util.Random;&#10;&#10;public class Main {&#10;    public Main() {&#10;    }&#10;&#10;    public static void main(String[] var0) {&#10;        byte var1 = 10;&#10;        byte var2 = 10;&#10;        byte var3 = 10;&#10;        int var4 = 0;&#10;        Random var5 = new Random((long)var2);&#10;        int var7 = 1;&#10;        String[][] var8 = new String[var1][var1];&#10;        String[][] var9 = new String[var1][var1];&#10;&#10;        int var10;&#10;        int var11;&#10;        int var10000;&#10;        for(var10 = 0; var10 &lt; var1; ++var10) {&#10;            for(var11 = 0; var11 &lt; var1; ++var11) {&#10;                boolean var6 = var5.nextBoolean();&#10;                var8[var10][var11] = var6 ? &quot;O&quot; : &quot; &quot;;&#10;                if (var6) {&#10;                    ++var4;&#10;                    var10000 = var4;&#10;                } else {&#10;                    var10000 = var4;&#10;                }&#10;&#10;                var4 = var10000;&#10;            }&#10;        }&#10;&#10;        System.out.println(&quot;Generation #&quot; + var7);&#10;        System.out.println(&quot;Alive: &quot; + var4);&#10;&#10;        for(var10 = 0; var10 &lt; var1; ++var10) {&#10;            for(var11 = 0; var11 &lt; var1; ++var11) {&#10;                System.out.print(var8[var10][var11]);&#10;            }&#10;&#10;            System.out.println();&#10;        }&#10;&#10;        while(var7 &lt;= var3) {&#10;            var4 = 0;&#10;&#10;            for(var10 = 0; var10 &lt; var1; ++var10) {&#10;                for(var11 = 0; var11 &lt; var1; ++var11) {&#10;                    byte var12 = 0;&#10;                    boolean var24 = false;&#10;                    int var13 = var10 == 0 ? var1 - 1 : var10 - 1;&#10;                    int var14 = var10 == var1 - 1 ? 0 : var10 + 1;&#10;                    int var15 = var11 == 0 ? var1 - 1 : var11 - 1;&#10;                    int var16 = var11 == var1 - 1 ? 0 : var11 + 1;&#10;                    int var17 = var10 == 0 ? var1 - 1 : var10 - 1;&#10;                    int var18 = var11 == 0 ? var1 - 1 : var11 - 1;&#10;                    int var19 = var10 == 0 ? var1 - 1 : var10 - 1;&#10;                    int var20 = var11 == var1 - 1 ? 0 : var11 + 1;&#10;                    int var21 = var10 == var1 - 1 ? 0 : var10 + 1;&#10;                    int var22 = var11 == 0 ? var1 - 1 : var11 - 1;&#10;                    int var23 = var10 == var1 - 1 ? 0 : var10 + 1;&#10;                    int var27 = var11 == var1 - 1 ? 0 : var11 + 1;&#10;                    int var26 = var8[var17][var18] == &quot;O&quot; ? var12 + 1 : var12;&#10;                    var26 = var8[var19][var20] == &quot;O&quot; ? var26 + 1 : var26;&#10;                    var26 = var8[var21][var22] == &quot;O&quot; ? var26 + 1 : var26;&#10;                    var26 = var8[var23][var27] == &quot;O&quot; ? var26 + 1 : var26;&#10;                    var26 = var8[var13][var11] == &quot;O&quot; ? var26 + 1 : var26;&#10;                    var26 = var8[var14][var11] == &quot;O&quot; ? var26 + 1 : var26;&#10;                    var26 = var8[var10][var15] == &quot;O&quot; ? var26 + 1 : var26;&#10;                    var26 = var8[var10][var16] == &quot;O&quot; ? var26 + 1 : var26;&#10;                    var9[var10][var11] = var8[var10][var11] == &quot;O&quot; ? (var26 &lt;= 3 &amp;&amp; var26 &gt;= 2 ? &quot;O&quot; : &quot; &quot;) : (var26 == 3 ? &quot;O&quot; : &quot; &quot;);&#10;                }&#10;            }&#10;&#10;            for(var10 = 0; var10 &lt; var1; ++var10) {&#10;                for(var11 = 0; var11 &lt; var1; ++var11) {&#10;                    var8[var10][var11] = var9[var10][var11];&#10;                    if (var9[var10][var11] == &quot;O&quot;) {&#10;                        ++var4;&#10;                        var10000 = var4;&#10;                    } else {&#10;                        var10000 = var4;&#10;                    }&#10;&#10;                    var4 = var10000;&#10;                }&#10;            }&#10;&#10;            ++var7;&#10;            System.out.println(&quot;Generation #&quot; + var7);&#10;            System.out.println(&quot;Alive: &quot; + var4);&#10;&#10;            for(var10 = 0; var10 &lt; var1; ++var10) {&#10;                for(var11 = 0; var11 &lt; var1; ++var11) {&#10;                    System.out.print(var8[var10][var11]);&#10;                }&#10;&#10;                System.out.println();&#10;            }&#10;&#10;            try {&#10;                if (System.getProperty(&quot;os.name&quot;).contains(&quot;Windows&quot;)) {&#10;                    (new ProcessBuilder(new String[]{&quot;cmd&quot;, &quot;/c&quot;, &quot;cls&quot;})).inheritIO().start().waitFor();&#10;                } else {&#10;                    Runtime.getRuntime().exec(&quot;clear&quot;);&#10;                }&#10;            } catch (InterruptedException | IOException var25) {&#10;            }&#10;        }&#10;&#10;    }&#10;}&#10;" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
                                 <option name="visible" value="true" />
